@@ -6,7 +6,6 @@ npm i --no-save @angular/cli@4.3.3 \
     @angular/compiler-cli@4.3.3 \
     @angular/core@4.3.3 \
     @angular/forms@4.3.3 \
-    @angular/http@4.3.3 \
     @angular/language-service@4.3.3 \
     @angular/platform-browser@4.3.3 \
     @angular/platform-browser-dynamic@4.3.3 \

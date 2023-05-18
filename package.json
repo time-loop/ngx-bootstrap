@@ -75,7 +75,6 @@
     "url": "https://github.com/valor-software/ngx-bootstrap/issues"
   },
   "homepage": "https://github.com/valor-software/ngx-bootstrap#readme",
-  "peerDependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "0.803.29",
     "@angular-devkit/core": "0.8.5",
@@ -87,7 +86,6 @@
     "@angular/compiler-cli": "8.2.14",
     "@angular/core": "8.2.14",
     "@angular/forms": "8.2.14",
-    "@angular/http": "7.2.16",
     "@angular/language-service": "8.2.14",
     "@angular/platform-browser": "8.2.14",
     "@angular/platform-browser-dynamic": "8.2.14",

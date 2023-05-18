@@ -7,7 +7,6 @@ npm i @angular/animations@latest \
     @angular/compiler-cli@latest \
     @angular/core@latest \
     @angular/forms@latest \
-    @angular/http@latest \
     @angular/language-service@latest \
     @angular/platform-browser@latest \
     @angular/platform-server@latest \
