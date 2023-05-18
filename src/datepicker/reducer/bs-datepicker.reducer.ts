@@ -1,6 +1,6 @@
 // tslint:disable:max-file-line-count
 import { BsDatepickerState, initialDatepickerState } from './bs-datepicker.state';
-import { Action } from 'ngx-bootstrap/mini-ngrx';
+import { Action } from '@time-loop/ngx-bootstrap/mini-ngrx';
 import { BsDatepickerActions } from './bs-datepicker.actions';
 import { calcDaysCalendar } from '../engine/calc-days-calendar';
 import { formatDaysCalendar } from '../engine/format-days-calendar';
@@ -14,7 +14,7 @@ import {
   getLocale,
   isAfter,
   isBefore
-} from 'ngx-bootstrap/chronos';
+} from '@time-loop/ngx-bootstrap/chronos';
 import { canSwitchMode } from '../engine/view-mode';
 import { formatMonthsCalendar } from '../engine/format-months-calendar';
 import { flagMonthsCalendar } from '../engine/flag-months-calendar';

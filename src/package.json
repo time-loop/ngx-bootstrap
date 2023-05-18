@@ -1,9 +1,8 @@
 {
-  "name": "ngx-bootstrap",
-  "es2015": "bundles/ngx-bootstrap.es2015.js",
+  "name": "@time-loop/ngx-bootstrap",
   "peerDependencies": {
-    "@angular/core": "*",
-    "@angular/common": "*"
+    "@angular/core": ">=12.0.0",
+    "@angular/common": ">=12.0.0"
   },
   "version": "3.2.0"
 }

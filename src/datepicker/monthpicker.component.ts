@@ -2,7 +2,7 @@
 // tslint:disable
 import { Component, OnInit } from '@angular/core';
 
-import { isBs3 } from 'ngx-bootstrap/utils';
+import { isBs3 } from '@time-loop/ngx-bootstrap/utils';
 import { DatePickerInnerComponent } from './datepicker-inner.component';
 
 @Component({
@@ -20,7 +20,7 @@ import { DatePickerInnerComponent } from './datepicker-inner.component';
                 (click)="datePicker.toggleMode(0)"
                 [disabled]="datePicker.datepickerMode === maxMode"
                 [ngClass]="{disabled: datePicker.datepickerMode === maxMode}" tabindex="-1" style="width:100%;">
-          <strong>{{ title }}</strong> 
+          <strong>{{ title }}</strong>
         </button>
       </th>
       <th>

@@ -11,7 +11,7 @@ import {
   isSameDay,
   isSameMonth,
   shiftDate
-} from 'ngx-bootstrap/chronos';
+} from '@time-loop/ngx-bootstrap/chronos';
 
 import { isMonthDisabled } from '../utils/bs-calendar-utils';
 

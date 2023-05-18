@@ -1,6 +1,6 @@
 import { Component, Host, HostBinding, Input, OnDestroy, OnInit } from '@angular/core';
 import { ProgressbarConfig } from './progressbar.config';
-import { isBs3 } from 'ngx-bootstrap/utils';
+import { isBs3 } from '@time-loop/ngx-bootstrap/utils';
 
 @Component({
   selector: 'progressbar',

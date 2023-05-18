@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
-import { ComponentLoaderFactory } from 'ngx-bootstrap/component-loader';
-import { PositioningService } from 'ngx-bootstrap/positioning';
+import { ComponentLoaderFactory } from '@time-loop/ngx-bootstrap/component-loader';
+import { PositioningService } from '@time-loop/ngx-bootstrap/positioning';
 
 import { BsDatepickerInputDirective } from './bs-datepicker-input.directive';
 import { BsDatepickerDirective } from './bs-datepicker.component';

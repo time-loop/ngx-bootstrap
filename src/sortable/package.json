@@ -1,5 +1,5 @@
 {
-  "name": "ngx-bootstrap/sortable",
+  "name": "@time-loop/ngx-bootstrap/sortable",
   "version": "3.2.0",
   "description": "Native Angular Bootstrap Components",
   "private": true,

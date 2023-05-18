@@ -1,5 +1,5 @@
 {
-  "name": "ngx-bootstrap/carousel",
+  "name": "@time-loop/ngx-bootstrap/carousel",
   "version": "3.2.0",
   "description": "Native Angular Bootstrap Components",
   "private": true,

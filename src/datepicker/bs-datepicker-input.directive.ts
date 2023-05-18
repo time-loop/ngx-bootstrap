@@ -25,7 +25,7 @@ import {
   isBefore,
   isDate,
   isDateValid
-} from 'ngx-bootstrap/chronos';
+} from '@time-loop/ngx-bootstrap/chronos';
 
 import { BsDatepickerDirective } from './bs-datepicker.component';
 import { BsLocaleService } from './bs-locale.service';

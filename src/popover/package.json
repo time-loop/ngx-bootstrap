@@ -1,5 +1,5 @@
 {
-  "name": "ngx-bootstrap/popover",
+  "name": "@time-loop/ngx-bootstrap/popover",
   "version": "3.2.0",
   "description": "Native Angular Bootstrap Components",
   "private": true,

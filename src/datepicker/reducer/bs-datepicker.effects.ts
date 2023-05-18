@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 
-import { getFullYear, getMonth } from 'ngx-bootstrap/chronos';
+import { getFullYear, getMonth } from '@time-loop/ngx-bootstrap/chronos';
 
 import { BsDatepickerAbstractComponent } from '../base/bs-datepicker-container';
 import { BsDatepickerActions } from './bs-datepicker.actions';
