@@ -17,113 +17,113 @@ export const routes = [
     data: ['Accordion'],
     // component: AccordionSectionComponent
     loadChildren:
-      './components/+accordion/demo-accordion.module#DemoAccordionModule'
+      () => import('./components/+accordion/demo-accordion.module').then(m => m.DemoAccordionModule)
   },
   {
     path: 'alerts',
     data: ['Alerts'],
     // component: AlertsSectionComponent,
-    loadChildren: './components/+alerts/demo-alert.module#DemoAlertsModule'
+    loadChildren: () => import('./components/+alerts/demo-alert.module').then(m => m.DemoAlertsModule)
   },
   {
     path: 'buttons',
     data: ['Buttons'],
     // component: ButtonsSectionComponent
-    loadChildren: './components/+buttons/demo-buttons.module#DemoButtonsModule'
+    loadChildren: () => import('./components/+buttons/demo-buttons.module').then(m => m.DemoButtonsModule)
   },
   {
     path: 'carousel',
     data: ['Carousel'],
     // component: CarouselSectionComponent
     loadChildren:
-      './components/+carousel/demo-carousel.module#DemoCarouselModule'
+      () => import('./components/+carousel/demo-carousel.module').then(m => m.DemoCarouselModule)
   },
   {
     path: 'collapse',
     data: ['Collapse'],
     // component: CollapseSectionComponent
     loadChildren:
-      './components/+collapse/demo-collapse.module#DemoCollapseModule'
+      () => import('./components/+collapse/demo-collapse.module').then(m => m.DemoCollapseModule)
   },
   {
     path: 'datepicker',
     data: ['Datepicker'],
     // component: DatepickerSectionComponent
     loadChildren:
-      './components/+datepicker/demo-datepicker.module#DemoDatepickerModule'
+      () => import('./components/+datepicker/demo-datepicker.module').then(m => m.DemoDatepickerModule)
   },
   {
     path: 'dropdowns',
     data: ['Dropdowns'],
     // component: DropdownSectionComponent
     loadChildren:
-      './components/+dropdown/demo-dropdown.module#DemoDropdownModule'
+      () => import('./components/+dropdown/demo-dropdown.module').then(m => m.DemoDropdownModule)
   },
 
   {
     path: 'modals',
     data: ['Modals'],
     // component: ModalSectionComponent
-    loadChildren: './components/+modal/demo-modal.module#DemoModalModule'
+    loadChildren: () => import('./components/+modal/demo-modal.module').then(m => m.DemoModalModule)
   },
   {
     path: 'pagination',
     data: ['Pagination'],
     // component: PaginationSectionComponent
     loadChildren:
-      './components/+pagination/demo-pagination.module#DemoPaginationModule'
+      () => import('./components/+pagination/demo-pagination.module').then(m => m.DemoPaginationModule)
   },
   {
     path: 'popover',
     data: ['Popover'],
     // component: PopoverSectionComponent
-    loadChildren: './components/+popover/demo-popover.module#DemoPopoverModule'
+    loadChildren: () => import('./components/+popover/demo-popover.module').then(m => m.DemoPopoverModule)
   },
   {
     path: 'progressbar',
     data: ['Progressbar'],
     // component: ProgressbarSectionComponent
     loadChildren:
-      './components/+progressbar/demo-progressbar.module#DemoProgressbarModule'
+      () => import('./components/+progressbar/demo-progressbar.module').then(m => m.DemoProgressbarModule)
   },
   {
     path: 'rating',
     data: ['Rating'],
     // component: RatingSectionComponent,
-    loadChildren: './components/+rating/demo-rating.module#DemoRatingModule'
+    loadChildren: () => import('./components/+rating/demo-rating.module').then(m => m.DemoRatingModule)
   },
   {
     path: 'sortable',
     data: ['Sortable'],
     // component: SortableSectionComponent,
     loadChildren:
-      './components/+sortable/demo-sortable.module#DemoSortableModule'
+      () => import('./components/+sortable/demo-sortable.module').then(m => m.DemoSortableModule)
   },
   {
     path: 'tabs',
     data: ['Tabs'],
     // component: TabsSectionComponent
-    loadChildren: './components/+tabs/demo-tabs.module#DemoTabsModule'
+    loadChildren: () => import('./components/+tabs/demo-tabs.module').then(m => m.DemoTabsModule)
   },
   {
     path: 'timepicker',
     data: ['Timepicker'],
     // component: TimepickerSectionComponent
     loadChildren:
-      './components/+timepicker/demo-timepicker.module#DemoTimepickerModule'
+      () => import('./components/+timepicker/demo-timepicker.module').then(m => m.DemoTimepickerModule)
   },
   {
     path: 'tooltip',
     data: ['Tooltip'],
     // component: TooltipSectionComponent
-    loadChildren: './components/+tooltip/demo-tooltip.module#DemoTooltipModule'
+    loadChildren: () => import('./components/+tooltip/demo-tooltip.module').then(m => m.DemoTooltipModule)
   },
   {
     path: 'typeahead',
     data: ['Typeahead'],
     // component: TypeaheadSectionComponent
     loadChildren:
-      './components/+typeahead/demo-typeahead.module#DemoTypeaheadModule'
+      () => import('./components/+typeahead/demo-typeahead.module').then(m => m.DemoTypeaheadModule)
   },
   {
     path: '**',

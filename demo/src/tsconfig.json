@@ -2,13 +2,15 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "../temp/out-tsc",
-    "module": "es2015",
     "types": [
       "webpack"
     ]
   },
-  "exclude": [
-    "src/test.ts",
-    "**/*.spec.ts"
+  "files": [
+    "main.ts",
+    "polyfills.ts"
+  ],
+  "include": [
+    "demo/src/**/*.d.ts"
   ]
 }
