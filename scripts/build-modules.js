@@ -30,14 +30,11 @@ async function buildAll() {
 
   const requiredModules = ['collapse', 'chronos', 'utils', 'positioning', 'component-loader', 'dropdown', 'locale',
     'alert', 'buttons', 'carousel', 'mini-ngrx', 'modal', 'pagination', 'popover', 'progressbar', 'rating',
-    'sortable', 'tabs', 'timepicker', 'tooltip', 'typeahead', 'datepicker', 'accordion', 'common'];
+    'sortable', 'tabs', 'timepicker', 'tooltip', 'typeahead', 'datepicker', 'accordion'];
 
   await buildModules(requiredModules);
 
   await execa.shell(`rsync -avr  --include='*/' --include='*.scss' --exclude='*' ${src}/datepicker ${dist}`);
-
-  await execa.shell(`rsync -a dist/common/. dist/ --exclude package.json`);
-  await del(`${dist}/${common}`);
 }
 
 const cli = meow(`

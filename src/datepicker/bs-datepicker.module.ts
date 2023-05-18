@@ -85,3 +85,9 @@ export class BsDatepickerModule {
     };
   }
 }
+
+export { BsDatepickerContainerComponent } from './themes/bs/bs-datepicker-container.component';
+export { BsDatepickerInlineContainerComponent } from './themes/bs/bs-datepicker-inline-container.component';
+export { BsDatepickerInputDirective } from './bs-datepicker-input.directive';
+export { BsDaterangepickerContainerComponent } from './themes/bs/bs-daterangepicker-container.component';
+export { BsDaterangepickerInputDirective } from './bs-daterangepicker-input.directive';

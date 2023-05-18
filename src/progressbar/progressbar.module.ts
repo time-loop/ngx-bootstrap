@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule, ModuleWithProviders } from '@angular/core';
 
-import { BarComponent } from './bar.component';
-import { ProgressbarComponent } from './progressbar.component';
+import { ProgressbarComponent, BarComponent } from './progressbar.component';
 import { ProgressbarConfig } from './progressbar.config';
 
 @NgModule({

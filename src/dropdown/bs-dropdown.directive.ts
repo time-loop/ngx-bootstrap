@@ -1,5 +1,7 @@
 // tslint:disable:max-file-line-count
 import {
+  ChangeDetectionStrategy, ChangeDetectorRef,
+  Component,
   Directive,
   ElementRef,
   EmbeddedViewRef,
@@ -16,7 +18,6 @@ import { Subscription } from 'rxjs';
 import { ComponentLoader, ComponentLoaderFactory, BsComponentRef } from 'ngx-bootstrap/component-loader';
 
 import { BsDropdownConfig } from './bs-dropdown.config';
-import { BsDropdownContainerComponent } from './bs-dropdown-container.component';
 import { BsDropdownState } from './bs-dropdown.state';
 import { BsDropdownMenuDirective } from './index';
 import { isBs3 } from 'ngx-bootstrap/utils';
@@ -372,5 +373,67 @@ export class BsDropdownDirective implements OnInit, OnDestroy {
       this._renderer.removeStyle(this._inlinedMenu.rootNodes[0], 'transform');
       this._renderer.removeStyle(this._inlinedMenu.rootNodes[0], 'bottom');
     }
+  }
+}
+
+@Component({
+  selector: 'bs-dropdown-container',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    style: 'display:block;position: absolute;'
+  },
+  template: `
+    <div [class.dropup]="direction === 'up'"
+         [class.dropdown]="direction === 'down'"
+         [class.show]="isOpen"
+         [class.open]="isOpen"><ng-content></ng-content></div>
+  `
+})
+export class BsDropdownContainerComponent implements OnDestroy {
+  isOpen = false;
+
+  get direction(): 'down' | 'up' {
+    return this._state.direction;
+  }
+
+// tslint:disable-next-line:no-any
+  private _subscription: any;
+
+  constructor(
+    private _state: BsDropdownState,
+    private cd: ChangeDetectorRef,
+    private _renderer: Renderer2,
+    private _element: ElementRef
+  ) {
+    this._subscription = _state.isOpenChange.subscribe((value: boolean) => {
+      this.isOpen = value;
+      const dropdown = this._element.nativeElement.querySelector('.dropdown-menu');
+      if (dropdown && !isBs3()) {
+        this._renderer.addClass(dropdown, 'show');
+        if (dropdown.classList.contains('dropdown-menu-right')) {
+          this._renderer.setStyle(dropdown, 'left', 'auto');
+          this._renderer.setStyle(dropdown, 'right', '0');
+        }
+        if (this.direction === 'up') {
+          this._renderer.setStyle(dropdown, 'top', 'auto');
+          this._renderer.setStyle(
+            dropdown,
+            'transform',
+            'translateY(-101%)'
+          );
+        }
+      }
+      this.cd.markForCheck();
+      this.cd.detectChanges();
+    });
+  }
+
+  /** @internal */
+  _contains(el: Element): boolean {
+    return this._element.nativeElement.contains(el);
+  }
+
+  ngOnDestroy(): void {
+    this._subscription.unsubscribe();
   }
 }
