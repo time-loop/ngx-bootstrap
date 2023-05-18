@@ -23,7 +23,7 @@ export class TestComponent {
   name = 'World';
   show = true;
 
-  @ViewChild(TooltipDirective) tooltip: TooltipDirective;
+  @ViewChild(TooltipDirective, /* TODO: add static flag */ {}) tooltip: TooltipDirective;
 
   shown(): void {
     return;

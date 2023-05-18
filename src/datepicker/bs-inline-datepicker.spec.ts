@@ -10,7 +10,7 @@ import { BsDatepickerContainerComponent } from './themes/bs/bs-datepicker-contai
   template: `<bs-datepicker-inline [bsConfig]="bsConfig"></bs-datepicker-inline>>`
 })
 class TestComponent {
-  @ViewChild(BsDatepickerInlineDirective) datepicker: BsDatepickerInlineDirective;
+  @ViewChild(BsDatepickerInlineDirective, /* TODO: add static flag */ {}) datepicker: BsDatepickerInlineDirective;
   bsConfig: Partial<BsDatepickerInlineConfig> = {
     customTodayClass: 'custom-today-class'
   };

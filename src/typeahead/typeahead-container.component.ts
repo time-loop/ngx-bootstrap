@@ -48,7 +48,7 @@ export class TypeaheadContainerComponent {
   protected _active: TypeaheadMatch;
   protected _matches: TypeaheadMatch[] = [];
 
-  @ViewChild('ulElement')
+  @ViewChild('ulElement', /* TODO: add static flag */ {})
   private ulElement: ElementRef;
 
   @ViewChildren('liElements')

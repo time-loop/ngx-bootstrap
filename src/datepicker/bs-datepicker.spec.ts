@@ -12,7 +12,7 @@ import { registerEscClick } from '../utils';
   template: `<input type="text" bsDatepicker [bsConfig]="bsConfig">`
 })
 class TestComponent {
-  @ViewChild(BsDatepickerDirective) datepicker: BsDatepickerDirective;
+  @ViewChild(BsDatepickerDirective, /* TODO: add static flag */ {}) datepicker: BsDatepickerDirective;
   bsConfig: Partial<BsDatepickerConfig> = {
     displayMonths: 2,
     selectWeek: true
