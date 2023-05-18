@@ -2,7 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "module": "esnext",
+    "module": "es2020",
     "outDir": "./temp/out-tsc",
     "sourceMap": true,
     "strict": true,

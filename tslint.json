@@ -3,7 +3,13 @@
   "rulesDirectory": "./node_modules/codelyzer",
   "rules": {
     "import-blacklist": [true, "rxjs/Rx", "lodash"],
-    "member-access": [true, "no-public"],
+    "member-access": [
+      true,
+      "no-public"
+    ],
+    "deprecation": {
+      "severity": "warning"
+    },
     "no-void-expression": ["ignore-arrow-function-shorthand"],
     "space-before-function-paren": [true, {"anonymous": "always", "named": "never", "asyncArrow": "always"}],
     "use-host-property-decorator": false,

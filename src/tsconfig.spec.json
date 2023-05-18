@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "../dist/out-tsc",
     "baseUrl": ".",
-    "module": "esnext",
+    "module": "es2020",
     "target": "es5",
     "sourceMap": true,
     "declaration": false,
