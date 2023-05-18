@@ -24,7 +24,7 @@ import { ThemeStorage } from './theme/theme-storage';
     DocsModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, { useHash: environment.useHash }),
+    RouterModule.forRoot(routes, { useHash: environment.useHash, relativeLinkResolution: 'legacy' }),
     NgxPageScrollModule,
     BsDropdownModule.forRoot(),
     BrowserModule.withServerTransition({ appId: 'ngx-bootstrap' })

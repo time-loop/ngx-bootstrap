@@ -1,6 +1,6 @@
 /* tslint:disable:max-file-line-count */
 import { Component, DebugElement } from '@angular/core';
-import { async, fakeAsync, TestBed, tick, ComponentFixture } from '@angular/core/testing';
+import { fakeAsync, TestBed, tick, ComponentFixture, waitForAsync } from '@angular/core/testing';
 
 import { BsDropdownConfig, BsDropdownDirective, BsDropdownModule } from '../dropdown';
 import { window } from '../utils/facade/browser';
@@ -47,7 +47,7 @@ describe('Directive: Dropdown', () => {
   let element: HTMLElement;
   let context: TestDropdownComponent;
   let directive: BsDropdownDirective;
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [TestDropdownComponent],
       imports: [BsDropdownModule.forRoot()]

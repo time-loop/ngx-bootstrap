@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { BsDatepickerInlineConfig, BsDatepickerInlineDirective, BsDatepickerModule } from '.';
 import { CalendarCellViewModel } from './models';
@@ -32,7 +32,7 @@ function getDatepickerInlineContainer(datepicker: BsDatepickerInlineDirective): 
 describe('datepicker inline:', () => {
   let fixture: TestFixture;
   beforeEach(
-    async(() => TestBed.configureTestingModule({
+    waitForAsync(() => TestBed.configureTestingModule({
         declarations: [TestComponent],
         imports: [BsDatepickerModule.forRoot()]
     }).compileComponents()
