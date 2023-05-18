@@ -17,7 +17,7 @@
     ],
     "lib": ["es2017", "dom"],
     "paths": {
-      "ngx-bootstrap/*": ["./src/*"],
+      "ngx-bootstrap/*": ["./src/*"]
     }
   }
 }
