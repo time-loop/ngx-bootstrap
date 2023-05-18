@@ -11,7 +11,6 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
             "outputPath": "demo/dist/browser",
             "index": "demo/src/index.html",
             "main": "demo/src/main.ts",
@@ -25,7 +24,13 @@
               "demo/src/assets/css/style.scss",
               "demo/src/assets/css/prettify-angulario.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -39,10 +44,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "namedChunks": true,
-              "aot": true,
               "extractLicenses": true,
-              "vendorChunk": true,
               "buildOptimizer": true,
               "fileReplacements": [
                 {
@@ -62,8 +64,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "namedChunks": true,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -74,7 +74,8 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -128,8 +129,11 @@
           "options": {
             "outputPath": "demo/dist/server",
             "main": "demo/src/main.server.ts",
-            "tsConfig": "demo/src/tsconfig.server.json"
-          }
+            "tsConfig": "demo/src/tsconfig.server.json",
+            "sourceMap": true,
+            "optimization": false
+          },
+          "defaultConfiguration": ""
         }
       }
     },

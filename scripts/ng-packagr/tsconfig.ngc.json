@@ -19,7 +19,6 @@
     "inlineSourceMap": false,
     "inlineSources": true,
     "skipLibCheck": true,
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
     "lib": ["dom", "es2018"]

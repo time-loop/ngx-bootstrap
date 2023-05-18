@@ -42,7 +42,7 @@ export class AppComponent implements AfterContentInit {
         PR.prettyPrint();
       }
 
-      const hash = this.route.snapshot.fragment;
+      const hash = this.route.snapshot.fragment!;
       if (hash) {
         const pageScrollInstance: PageScrollInstance = PageScrollInstance.simpleInstance(
           this.document,
